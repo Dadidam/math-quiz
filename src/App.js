@@ -12,8 +12,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Routes />
+      <div className="flex-wrapper">
+        <div className="flex-container">
+          <div className="flex-box">
+            <Routes />
+          </div>
+        </div>
       </div>
     );
   }

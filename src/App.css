@@ -3,3 +3,39 @@
 body {
   background-color: #eee;
 }
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.flex-box {
+  width: 100%;
+  text-align: center;
+}
+
+.sticky-footer {
+  background-color: #e6e6e6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.left-corner-float {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 15px 0 0 15px;
+}
