@@ -18,11 +18,6 @@ const Home = ({ user }) => {
         <Icon type="trophy" />
         &nbsp;Best Quiz Players
       </a>
-      <div className="sticky-footer">
-        2019 &copy; Created with{' '}
-        <Icon type="heart" theme="twoTone" twoToneColor="#eb2f96" /> by Sofia
-        Vorontcova &amp; her Dad
-      </div>
     </div>
   );
 };

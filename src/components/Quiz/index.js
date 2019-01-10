@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import { Card, Button, Icon } from 'antd';
+import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz } from 'actions/quiz';
+import QuitButton from './QuitButton';
 import './style.css';
 
 class QuizApp extends Component {
   componentDidMount() {
     this.props.startQuiz();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.quiz === null) {
+      this.props.history.push('/');
+    }
   }
 
   render() {
@@ -24,11 +31,7 @@ class QuizApp extends Component {
         >
           (2 + 2) x 5 - 3 = ?
         </Card>
-        <div className="left-corner-float">
-          <Button ghost type="danger">
-            <Icon type="logout" /> Quit
-          </Button>
-        </div>
+        <QuitButton />
       </div>
     );
   }
