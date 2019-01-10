@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Icon } from 'antd';
 import { connect } from 'react-redux';
 import { quitQuiz } from 'actions/quiz';
-import './style.css';
 
 const QuitButton = props => {
   return (

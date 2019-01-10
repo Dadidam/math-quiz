@@ -3,7 +3,6 @@ import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz } from 'actions/quiz';
 import QuitButton from './QuitButton';
-import './style.css';
 
 class QuizApp extends Component {
   componentDidMount() {
