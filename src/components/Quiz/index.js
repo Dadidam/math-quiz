@@ -3,6 +3,7 @@ import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz } from 'actions/quiz';
 import QuitButton from './QuitButton';
+import QuizTimer from './QuizTimer';
 
 class QuizApp extends Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ class QuizApp extends Component {
   render() {
     return (
       <div>
+        <QuizTimer />
         <Card
           type="inner"
           title="Question 3 of 5"
