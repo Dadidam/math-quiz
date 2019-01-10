@@ -8,6 +8,10 @@ class QuizTimer extends Component {
     this.timer = setInterval(() => this.tickTimer(), 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
   tickTimer = () => {
     const { count } = this.state;
     const newCount = count > 0 ? count - 1 : 15;
