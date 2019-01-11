@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz } from 'actions/quiz';
 import QuitButton from './QuitButton';
 import QuizTimer from './QuizTimer';
+import QuizCard from './QuizCard';
 
 class QuizApp extends Component {
   componentDidMount() {
@@ -17,22 +17,14 @@ class QuizApp extends Component {
   }
 
   render() {
+    if (!this.props.quiz) return null;
+
     return (
       <div>
         <QuizTimer />
-        <Card
-          type="inner"
-          title="Question 3 of 5"
-          actions={[
-            <Button style={{ margin: '0 10px' }}>13123132</Button>,
-            <Button style={{ margin: '0 10px' }}>13123132</Button>,
-            <Button style={{ margin: '0 10px' }}>13123132</Button>,
-            <Button style={{ margin: '0 10px' }}>13123132</Button>
-          ]}
-        >
-          (2 + 2) x 5 - 3 = ?
-        </Card>
+        <QuizCard />
         <QuitButton />
+        <h5>Score: {this.props.quiz.score}</h5>
       </div>
     );
   }
