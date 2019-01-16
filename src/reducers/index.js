@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import user from './user';
 import quiz from './quiz';
+import timer from './timer';
 
 export default combineReducers({
-  user,
-  quiz
+  quiz,
+  timer
 });

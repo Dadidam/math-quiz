@@ -4,15 +4,21 @@ import { connect } from 'react-redux';
 import { startQuiz, nextQuestion, answerQuestion } from 'actions/quiz';
 
 class QuizCard extends Component {
-  state = { question: null, stage: null, timeLeft: null };
-  timer = null;
+  state = { question: null };
 
   componentDidMount() {
-    this.nextQuestion();
+    this.setState({ question: this.props.quiz.questions[0] });
   }
 
-  componentWillUnmount() {
-    clearInterval(this.timer);
+  componentWillReceiveProps(nextProps) {
+    if (
+      this.props.timer &&
+      nextProps.timer &&
+      this.props.timer.counter === 0 &&
+      nextProps.timer.counter === 15
+    ) {
+      setTimeout(() => this.nextQuestion(), 100);
+    }
   }
 
   getCardTitle() {
@@ -31,27 +37,24 @@ class QuizCard extends Component {
   //   });
   // }
 
-  setTimer = () => {
-    if (this.timer) clearInterval(this.timer);
-    this.timer = setInterval(() => this.nextQuestion(), 16000);
+  nextQuestion = () => {
+    // update stage value in redux store:
+    this.props.answerQuestion();
+
+    // update current question:
+    this.updateQuizQuestion();
   };
 
-  nextQuestion = () => {
-    const { stage, questions } = this.props.quiz;
-
-    if (stage > 1) {
-      // reset timer
-      this.setTimer();
-    }
-
-    // update state values
-    const stageIndex = stage > 1 ? stage - 1 : 0;
-    this.setState({ question: questions[stageIndex] });
+  updateQuizQuestion = () => {
+    setTimeout(() => {
+      const { stage, questions } = this.props.quiz;
+      this.setState({ question: questions[stage - 1] });
+    }, 100);
   };
 
   onAnswer = event => {
     this.props.answerQuestion(event.target.value);
-    setTimeout(() => this.nextQuestion(), 100);
+    this.updateQuizQuestion();
   };
 
   render() {
@@ -98,8 +101,8 @@ class QuizCard extends Component {
   }
 }
 
-function mapStateToProps({ quiz }) {
-  return { quiz };
+function mapStateToProps({ quiz, timer }) {
+  return { quiz, timer };
 }
 
 export default connect(

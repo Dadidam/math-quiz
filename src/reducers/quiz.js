@@ -12,11 +12,12 @@ export default function(state = null, action) {
       return { score: 0, stage: 1, questions: getRandomQuestions() };
     case QUIT_QUIZ:
       return null;
-    // case NEXT_QUESTION:
-      // debugger;
-      // const finished = state.stage === state.questions.length;
-      // const newStage = finished ? null : state.stage + 1;
-      // return { ...state, stage: newStage, finished };
+    case NEXT_QUESTION:
+      return state;
+    // debugger;
+    // const finished = state.stage === state.questions.length;
+    // const newStage = finished ? null : state.stage + 1;
+    // return { ...state, stage: newStage, finished };
     case ANSWER_QUESTION:
       const correctAnswer = state.questions[state.stage - 1].answer;
       const newScore =

@@ -4,5 +4,7 @@ export const QUIT_QUIZ = 'quit_quiz';
 export const NEXT_QUESTION = 'next_question';
 export const ANSWER_QUESTION = 'answer_question';
 
-// user
-export const GET_USER = 'get_user';
+// timer
+export const ACTIVATE_TIMER = 'activate_timer';
+export const UPDATE_TIMER = 'update_timer';
+export const STOP_TIMER = 'stop_timer';
