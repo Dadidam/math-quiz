@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Icon, Divider } from 'antd';
+import { Icon, Divider } from 'antd';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -8,10 +8,16 @@ const Home = ({ user }) => {
     <div>
       <h1>Math Quiz</h1>
       <Link to="/quiz">
-        <Button type="primary" size="large">
+        <img
+          src="button_500px.png"
+          width="120"
+          alt="Start Quiz"
+          className="startButton"
+        />
+        {/* <Button type="primary" size="large">
           START
           <Icon type="rocket" />
-        </Button>
+        </Button> */}
       </Link>
       <Divider />
       <a href="/">
