@@ -1,24 +1,12 @@
 import React from 'react';
 import { Icon, Divider } from 'antd';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import StartButton from './StartButton';
 
-const Home = ({ user }) => {
+const Home = () => {
   return (
     <div>
       <h1>Math Quiz</h1>
-      <Link to="/quiz">
-        <img
-          src="button_500px.png"
-          width="120"
-          alt="Start Quiz"
-          className="startButton"
-        />
-        {/* <Button type="primary" size="large">
-          START
-          <Icon type="rocket" />
-        </Button> */}
-      </Link>
+      <StartButton />
       <Divider />
       <a href="/">
         <Icon type="trophy" />
@@ -28,8 +16,4 @@ const Home = ({ user }) => {
   );
 };
 
-function mapStateToProps({ user }) {
-  return { user };
-}
-
-export default connect(mapStateToProps)(Home);
+export default Home;
