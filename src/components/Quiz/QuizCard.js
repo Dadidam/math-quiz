@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz, nextQuestion, answerQuestion } from 'actions/quiz';
+import { TIMER_MAX_VALUE } from 'helpers/config';
 
 class QuizCard extends Component {
   state = { question: null };
@@ -15,7 +16,7 @@ class QuizCard extends Component {
       this.props.timer &&
       nextProps.timer &&
       this.props.timer.counter === 0 &&
-      nextProps.timer.counter === 15
+      nextProps.timer.counter === TIMER_MAX_VALUE
     ) {
       setTimeout(() => this.nextQuestion(), 100);
     }

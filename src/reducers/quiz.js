@@ -5,6 +5,7 @@ import {
   ANSWER_QUESTION
 } from 'actions/types';
 import { getRandomQuestions } from 'helpers/db';
+import { CORRECT_ANSWER_POINTS } from 'helpers/config';
 
 export default function(state = null, action) {
   switch (action.type) {
@@ -22,7 +23,9 @@ export default function(state = null, action) {
       const { answer, timer } = action.payload;
       const correctAnswer = state.questions[state.stage - 1].answer;
       const newScore =
-        Number(answer) === correctAnswer ? state.score + 5 : state.score;
+        Number(answer) === correctAnswer
+          ? state.score + CORRECT_ANSWER_POINTS
+          : state.score;
       const bonusPoints = newScore > state.score ? timer : 0;
 
       const finished = state.stage === state.questions.length;
