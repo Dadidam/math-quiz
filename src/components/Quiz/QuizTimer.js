@@ -18,6 +18,12 @@ class QuizTimer extends Component {
     clearInterval(this.timer);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.timer && nextProps.timer === null) {
+      clearInterval(this.timer);
+    }
+  }
+
   tickTimer = () => {
     const { counter } = this.props.timer;
     const updatedCounter = counter > 0 ? counter - 1 : TIMER_MAX_VALUE;

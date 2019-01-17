@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'antd';
 import { connect } from 'react-redux';
 import { startQuiz, nextQuestion, answerQuestion } from 'actions/quiz';
+import { stopTimer } from 'actions/timer';
 import { TIMER_MAX_VALUE } from 'helpers/config';
 
 class QuizCard extends Component {
@@ -12,6 +13,7 @@ class QuizCard extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    // show next question if time's up:
     if (
       this.props.timer &&
       nextProps.timer &&
@@ -19,6 +21,14 @@ class QuizCard extends Component {
       nextProps.timer.counter === TIMER_MAX_VALUE
     ) {
       setTimeout(() => this.nextQuestion(), 100);
+    }
+
+    // stop timer ticking if quiz is done:
+    if (
+      this.props.quiz.finished === false &&
+      nextProps.quiz.finished === true
+    ) {
+      this.props.stopTimer();
     }
   }
 
@@ -108,5 +118,5 @@ function mapStateToProps({ quiz, timer }) {
 
 export default connect(
   mapStateToProps,
-  { startQuiz, nextQuestion, answerQuestion }
+  { startQuiz, nextQuestion, answerQuestion, stopTimer }
 )(QuizCard);
