@@ -53,7 +53,7 @@ class QuizCard extends Component {
   };
 
   onAnswer = event => {
-    this.props.answerQuestion(event.target.value);
+    this.props.answerQuestion(event.target.value, this.props.timer.counter);
     this.updateQuizQuestion();
   };
 

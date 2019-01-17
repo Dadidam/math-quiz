@@ -26,9 +26,9 @@ export function nextQuestion() {
   };
 }
 
-export function answerQuestion(answer) {
+export function answerQuestion(answer, timer) {
   return {
     type: ANSWER_QUESTION,
-    payload: answer
+    payload: { answer, timer }
   };
 }
