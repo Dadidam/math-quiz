@@ -8,3 +8,8 @@ export const ANSWER_QUESTION = 'answer_question';
 export const ACTIVATE_TIMER = 'activate_timer';
 export const UPDATE_TIMER = 'update_timer';
 export const STOP_TIMER = 'stop_timer';
+
+// top
+export const INIT_TOP = 'init_top';
+export const ADD_SCORE = 'add_score';
+export const TOGGLE_TOP_MODE = 'toggle_top_mode';

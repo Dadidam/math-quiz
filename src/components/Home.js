@@ -1,6 +1,7 @@
 import React from 'react';
-import { Icon, Divider } from 'antd';
+import { Divider } from 'antd';
 import StartButton from './StartButton';
+import Top from './Top';
 
 const Home = () => {
   return (
@@ -11,10 +12,7 @@ const Home = () => {
       </div> */}
       <StartButton />
       <Divider />
-      <a href="/">
-        <Icon type="trophy" />
-        &nbsp;Best Quiz Players
-      </a>
+      <Top />
     </div>
   );
 };
