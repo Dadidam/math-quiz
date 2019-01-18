@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Icon, Modal, Table } from 'antd';
-import { toggleTopMode } from 'actions/top';
 import { topColumns } from 'helpers/hall-of-fame';
 
 const Top = props => {
@@ -35,7 +34,4 @@ function mapStateToProps({ top }) {
   return { top };
 }
 
-export default connect(
-  mapStateToProps,
-  { toggleTopMode }
-)(Top);
+export default connect(mapStateToProps)(Top);

@@ -1,4 +1,4 @@
-import { /*INIT_TOP,*/ ADD_SCORE, TOGGLE_TOP_MODE } from 'actions/types';
+import { ADD_SCORE } from 'actions/types';
 import { setValue, getValue } from 'helpers/localStorage';
 import { bestPlayersStarter, sortTopList } from 'helpers/hall-of-fame';
 
@@ -11,11 +11,11 @@ const initState = () => {
     setValue('bestPlayers', bestPlayersStarter);
 
     // initialize state:
-    return { show: false, bestPlayers: sortTopList(bestPlayersStarter) };
+    return { bestPlayers: sortTopList(bestPlayersStarter) };
   }
 
   // otherwise, initialize the store with saved in localStorage values:
-  return { show: false, bestPlayers: sortTopList(bestPlayers) };
+  return { bestPlayers: sortTopList(bestPlayers) };
 };
 
 export default function(state = initState(), action) {
@@ -32,8 +32,6 @@ export default function(state = initState(), action) {
 
       // update current state:
       return { ...state, bestPlayers };
-    case TOGGLE_TOP_MODE:
-      return { ...state, show: !state.show };
     default:
       return state;
   }
