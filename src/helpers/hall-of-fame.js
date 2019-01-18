@@ -16,7 +16,7 @@ export const bestPlayersStarter = [
 ];
 
 export const sortTopList = topList => {
-  return _.reverse(_.sortBy(topList, ['name', 'score']));
+  return _.reverse(_.sortBy(topList, ['score', 'name']));
 };
 
 export const topColumns = [

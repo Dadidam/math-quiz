@@ -22,10 +22,13 @@ export default function(state = initState(), action) {
   switch (action.type) {
     case ADD_SCORE:
       // extend current list with passsed values:
-      const bestPlayers = [...state.bestPlayers, { ...action.payload }];
+      const bestPlayers = sortTopList([
+        ...state.bestPlayers,
+        { ...action.payload }
+      ]);
 
       // update localStorage:
-      setValue('bestPlayers', bestPlayers);
+      setValue('bestPlayers', sortTopList(bestPlayers));
 
       // update current state:
       return { ...state, bestPlayers };
