@@ -7,12 +7,23 @@ import { addScore } from 'actions/top';
 class Share extends Component {
   state = { player: '' };
 
+  componentDidMount() {
+    const { quiz } = this.props;
+
+    if (!quiz) {
+      this.redirect();
+    }
+  }
+
   onChangePlayerName = e => {
     this.setState({ player: e.target.value });
   };
 
   redirect = () => {
+    // clean quiz data:
     this.props.quitQuiz();
+
+    // redirect user:
     this.props.history.push('/');
   };
 
@@ -20,11 +31,8 @@ class Share extends Component {
     // save results in localStorage:
     this.props.addScore(this.state.player, this.props.quiz.score);
 
-    // clean quiz data:
-    this.props.quitQuiz();
-
-    // redirect user:
-    this.props.history.push('/');
+    // see you later:
+    this.redirect();
   };
 
   render() {
