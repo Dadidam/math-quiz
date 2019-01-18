@@ -49,3 +49,8 @@ body {
   transform: scale(1.2);
   transition: all 1s;
 }
+
+.score-result {
+  color: red;
+  font-weight: bold;
+}

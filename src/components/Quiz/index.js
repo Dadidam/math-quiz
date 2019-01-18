@@ -4,6 +4,7 @@ import { startQuiz } from 'actions/quiz';
 import QuitButton from './QuitButton';
 import QuizTimer from './QuizTimer';
 import QuizCard from './QuizCard';
+import QuizScore from './QuizScore';
 
 class QuizApp extends Component {
   componentDidMount() {
@@ -24,7 +25,7 @@ class QuizApp extends Component {
         <QuizTimer />
         <QuizCard />
         <QuitButton />
-        <h5>Score: {this.props.quiz.score}</h5>
+        <QuizScore />
       </div>
     );
   }
