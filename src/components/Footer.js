@@ -1,7 +1,9 @@
 import React from 'react';
 import { Icon } from 'antd';
 
-const Footer = () => {
+const Footer = props => {
+  if (!props.show) return null;
+  
   return (
     <div className="sticky-footer">
       2019 &copy; Created with{' '}

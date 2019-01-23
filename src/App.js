@@ -15,7 +15,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer show={this.props.location.pathname === '/'} />
       </div>
     );
   }

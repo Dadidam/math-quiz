@@ -21,7 +21,7 @@ const Top = props => {
   }
 
   return (
-    <div>
+    <div id="top-container">
       <Link to="" onClick={info}>
         <Icon type="trophy" />
         &nbsp;Best Quiz Players

@@ -105,8 +105,13 @@ class QuizCard extends Component {
     ];
 
     return (
-      <Card type="inner" title={this.getCardTitle()} actions={actions}>
-        {this.state.question.question}
+      <Card
+        type="inner"
+        title={this.getCardTitle()}
+        actions={actions}
+        id="quiz-card"
+      >
+        <code id="question">{this.state.question.question}</code>
       </Card>
     );
   }

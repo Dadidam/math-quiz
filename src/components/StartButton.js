@@ -11,7 +11,7 @@ const StartButton = () => {
           alt="Start Quiz"
           className="startButton"
         /> */}
-      <Button type="primary" size="large">
+      <Button type="primary" size="large" id="start-button">
         START
         <Icon type="rocket" />
       </Button>

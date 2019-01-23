@@ -37,14 +37,15 @@ class Share extends Component {
 
   render() {
     const { player } = this.state;
-    const title = player
-      ? `Your score, ${player}: ${this.props.quiz.score}. YAY!`
-      : 'Share your Score!';
     const disabled = String(player).length < 3;
 
     return (
       <div>
-        <h1>{title}</h1>
+        <h1>
+          <Icon type="trophy" />
+          &nbsp;{this.props.quiz.score}
+        </h1>
+        <h1>Enter your name:</h1>
         <Input
           placeholder="Enter your name"
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}

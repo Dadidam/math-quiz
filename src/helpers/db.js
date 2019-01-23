@@ -309,6 +309,6 @@ const db = [
   }
 ];
 
-export const getRandomQuestions = (count = 5) => {
+export const getRandomQuestions = (count = 10) => {
   return _.sampleSize(db, count);
 };

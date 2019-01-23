@@ -27,12 +27,16 @@ class QuizScore extends Component {
       return (
         <div>
           <h1>{this.renderGreetings()}</h1>
-          <h3>
-            Your Total Score: <span className="score-result">{quiz.score}</span>
-          </h3>
+          <h2>
+            Your Total Score:{' '}
+            <span className="score-result">
+              <Icon type="trophy" />
+              &nbsp;{quiz.score}
+            </span>
+          </h2>
           <Divider />
           <Link to="/quiz/share">
-            <Button type="primary">
+            <Button type="primary" id="share-button">
               Share my Score <Icon type="arrow-right" />
             </Button>
           </Link>
@@ -40,7 +44,12 @@ class QuizScore extends Component {
       );
 
     // quiz in action - show current progress:
-    return <h5>Score: {quiz.score}</h5>;
+    return (
+      <h3>
+        <Icon type="trophy" />
+        &nbsp;Score: {quiz.score}
+      </h3>
+    );
   }
 }
 

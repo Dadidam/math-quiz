@@ -34,10 +34,12 @@ class QuizTimer extends Component {
     const { timer } = this.props;
     if (!timer) return null;
 
+    const timerStyle = timer.counter > 3 ? 'green' : 'red';
+
     return (
       <div style={{ textAlign: 'center' }}>
-        <div>Seconds Left:</div>
-        <h3>{timer.counter}</h3>
+        <h2>Seconds Left:</h2>
+        <h2 style={{ color: timerStyle }}>{timer.counter}</h2>
       </div>
     );
   }
