@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Button, Icon, Divider } from 'antd';
+import { Icon } from 'antd';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { startQuiz } from 'actions/quiz';
+import ScoreAction from './QuizScoreAction';
 
 class QuizScore extends Component {
   renderGreetings = () => {
     const { score } = this.props.quiz;
 
     if (score <= 10) return 'Not Bad!';
-    if (score < 30) return 'Nice Try!';
-    if (score < 60) return 'Good Job!';
-    if (score < 100) return 'Brilliant!';
+    if (score < 100) return 'Nice Try!';
+    if (score < 200) return 'Great Job!';
+    if (score < 300) return 'Brilliant!';
 
     return 'You are AWESOME!';
   };
@@ -34,12 +34,7 @@ class QuizScore extends Component {
               &nbsp;{quiz.score}
             </span>
           </h2>
-          <Divider />
-          <Link to="/quiz/share">
-            <Button type="primary" id="share-button">
-              Share my Score <Icon type="arrow-right" />
-            </Button>
-          </Link>
+          <ScoreAction />
         </div>
       );
 
