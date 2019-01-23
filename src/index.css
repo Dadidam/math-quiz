@@ -18,6 +18,10 @@ code {
   margin: 35px 0;
 }
 
+#quiz-card .ant-btn:focus {
+  border: 1px solid #d9d9d9;
+}
+
 /* low resolution, 480px and below */
 @media only screen and (max-width: 480px) {
   h1 {
