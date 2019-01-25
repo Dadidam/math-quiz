@@ -3,6 +3,7 @@ import { Button, Icon, Input, Divider } from 'antd';
 import { connect } from 'react-redux';
 import { quitQuiz } from 'actions/quiz';
 import { addScore } from 'actions/top';
+import QuitButton from './QuitButton';
 
 class Share extends Component {
   state = { player: '' };
@@ -36,11 +37,14 @@ class Share extends Component {
   };
 
   render() {
+    if (!this.props.quiz) return null;
+
     const { player } = this.state;
     const disabled = String(player).length < 3;
 
     return (
       <div>
+        <QuitButton action={this.redirect} />
         <h1>
           <Icon type="trophy" />
           &nbsp;{this.props.quiz.score}

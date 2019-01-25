@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import { quitQuiz } from 'actions/quiz';
 
 const QuitButton = props => {
+  const cb = props.action || props.quitQuiz;
   return (
     <div className="left-corner-float">
-      <Button ghost type="danger" onClick={props.quitQuiz}>
+      <Button ghost type="danger" onClick={cb}>
         <Icon type="logout" /> Quit
       </Button>
     </div>
