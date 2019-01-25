@@ -58,6 +58,11 @@ code {
     font-size: 16px;
     height: 30px;
   }
+
+  #steam-logo {
+    width: 300px;
+    padding-bottom: 20px;
+  }
 }
 
 /* medium resolution, 481px to 1023px */
@@ -95,6 +100,11 @@ code {
     font-size: 18px;
     height: 30px;
   }
+
+  #steam-logo {
+    width: 450px;
+    padding-bottom: 25px;
+  }
 }
 
 /* high resolution, 1024px and higher */
@@ -131,5 +141,10 @@ code {
   .ant-card-actions button {
     font-size: 20px;
     height: 35px;
+  }
+
+  #steam-logo {
+    width: 750px;
+    padding-bottom: 30px;
   }
 }
