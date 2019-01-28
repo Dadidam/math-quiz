@@ -5,6 +5,8 @@ import { Icon, Modal, Table } from 'antd';
 import { topColumns } from 'helpers/hall-of-fame';
 
 const Top = props => {
+  const showPagination = props.top.bestPlayers.length > 10;
+
   function info() {
     Modal.info({
       title: 'Best Quiz Players',
@@ -13,6 +15,7 @@ const Top = props => {
           columns={topColumns}
           dataSource={props.top.bestPlayers}
           size="small"
+          pagination={showPagination}
         />
       ),
       centered: true,
