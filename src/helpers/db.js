@@ -306,6 +306,306 @@ const db = [
     question: '60 - 5 x 8 = ?',
     answers: [1, 2, 10, 20],
     answer: 20
+  },
+  {
+    id: 52,
+    question: '(57 - 36) : 3 = ?',
+    answers: [5, 7, 14, 15],
+    answer: 7
+  },
+  {
+    id: 53,
+    question: '(31 - 28) x 9 = ?',
+    answers: [18, 21, 24, 27],
+    answer: 27
+  },
+  {
+    id: 54,
+    question: '(11 + 7) : 2 = ?',
+    answers: [7, 8, 9, 10],
+    answer: 9
+  },
+  {
+    id: 55,
+    question: '(19 + 5) : 3 = ?',
+    answers: [4, 6, 8, 10],
+    answer: 8
+  },
+  {
+    id: 56,
+    question: '(98 - 90) x 3 = ?',
+    answers: [16, 20, 24, 32],
+    answer: 24
+  },
+  {
+    id: 57,
+    question: '(88 - 83) x 2 = ?',
+    answers: [5, 10, 12, 15],
+    answer: 10
+  },
+  {
+    id: 58,
+    question: '(45 - 5) : 10 = ?',
+    answers: [1, 4, 10, 40],
+    answer: 4
+  },
+  {
+    id: 59,
+    question: '18 : 3 + 4 x 3 = ?',
+    answers: [2, 9, 18, 39],
+    answer: 18
+  },
+  {
+    id: 60,
+    question: '40 : 4 x 3 = ?',
+    answers: [3, 12, 21, 30],
+    answer: 30
+  },
+  {
+    id: 61,
+    question: '50 : 5 x 6 = ?',
+    answers: [1, 6, 10, 60],
+    answer: 60
+  },
+  {
+    id: 62,
+    question: '70 : 7 x 9 = ?',
+    answers: [7, 9, 70, 90],
+    answer: 90
+  },
+  {
+    id: 63,
+    question: '1 x 30 : 10 = ?',
+    answers: [1, 3, 10, 30],
+    answer: 3
+  },
+  {
+    id: 64,
+    question: '8 x (49 - 46) = ?',
+    answers: [8, 16, 24, 32],
+    answer: 24
+  },
+  {
+    id: 65,
+    question: '49 : 7 x 3 + 6 = ?',
+    answers: [7, 14, 21, 27],
+    answer: 27
+  },
+  {
+    id: 66,
+    question: '12 x 6 : 8 = ?',
+    answers: [7, 8, 9, 10],
+    answer: 9
+  },
+  {
+    id: 67,
+    question: '25 + 10 - 7 + 12 = ?',
+    answers: [38, 40, 42, 50],
+    answer: 40
+  },
+  {
+    id: 68,
+    question: '25 + (10 - 3) + 12 = ?',
+    answers: [32, 34, 42, 44],
+    answer: 44
+  },
+  {
+    id: 69,
+    question: '(13 + 8) - 3 = ?',
+    answers: [18, 20, 21, 23],
+    answer: 18
+  },
+  {
+    id: 70,
+    question: '(30 - 10) - 7 = ?',
+    answers: [3, 7, 13, 15],
+    answer: 13
+  },
+  {
+    id: 71,
+    question: '(40 + 20) - 51 = ?',
+    answers: [8, 9, 10, 11],
+    answer: 9
+  },
+  {
+    id: 71,
+    question: '50 + 2 x 3 = ?',
+    answers: [56, 76, 96, 156],
+    answer: 56
+  },
+  {
+    id: 72,
+    question: '63 : 9 + 44 = ?',
+    answers: [50, 51, 52, 55],
+    answer: 51
+  },
+  {
+    id: 73,
+    question: '6 x 6 : 9 = ?',
+    answers: [1, 2, 3, 4],
+    answer: 4
+  },
+  {
+    id: 74,
+    question: '70 - 3 x 8 = ?',
+    answers: [21, 46, 284, 536],
+    answer: 46
+  },
+  {
+    id: 75,
+    question: '(18 + 18) : 4 = ?',
+    answers: [7, 8, 9, 10],
+    answer: 9
+  },
+  {
+    id: 76,
+    question: '81 : (12 - 3) = ?',
+    answers: [8, 9, 10, 11],
+    answer: 9
+  },
+  {
+    id: 77,
+    question: '6 x 8 - 40 = ?',
+    answers: [6, 8, 12, 14],
+    answer: 8
+  },
+  {
+    id: 78,
+    question: '91 - 8 x 9 = ?',
+    answers: [15, 19, 20, 29],
+    answer: 19
+  },
+  {
+    id: 79,
+    question: '5 x 7 + 56 = ?',
+    answers: [71, 81, 91, 98],
+    answer: 91
+  },
+  {
+    id: 80,
+    question: '(55 + 9) : 8 = ?',
+    answers: [8, 11, 12, 18],
+    answer: 8
+  },
+  {
+    id: 81,
+    question: '5 x 6 - 7 = ?',
+    answers: [4, 14, 24, 37],
+    answer: 24
+  },
+  {
+    id: 82,
+    question: '(26 + 46) : 8 = ?',
+    answers: [9, 30, 64, 80],
+    answer: 9
+  },
+  {
+    id: 83,
+    question: '3 x 3 x 3 = ?',
+    answers: [3, 9, 18, 27],
+    answer: 27
+  },
+  {
+    id: 84,
+    question: '4 x 4 : 2 = ?',
+    answers: [2, 4, 8, 16],
+    answer: 8
+  },
+  {
+    id: 85,
+    question: '(56 - 8) : 8 = ?',
+    answers: [2, 4, 6, 8],
+    answer: 6
+  },
+  {
+    id: 86,
+    question: '72 : 8 + 9 x 3 = ?',
+    answers: [18, 27, 36, 54],
+    answer: 36
+  },
+  {
+    id: 87,
+    question: '72 : (2 + 6) = ?',
+    answers: [8, 9, 36, 42],
+    answer: 9
+  },
+  {
+    id: 88,
+    question: '6 x 4 - 20 : 4 = ?',
+    answers: [1, 9, 11, 19],
+    answer: 19
+  },
+  {
+    id: 89,
+    question: '45 : 5 - 8 : 2 = ?',
+    answers: [3, 4, 5, 6],
+    answer: 5
+  },
+  {
+    id: 90,
+    question: '6 x 6 - 56 : 7 = ?',
+    answers: [14, 18, 24, 28],
+    answer: 28
+  },
+  {
+    id: 91,
+    question: '3 x 9 + 5 x 5 = ?',
+    answers: [42, 52, 55, 57],
+    answer: 52
+  },
+  {
+    id: 92,
+    question: '5 x 9 + 6 x 8 = ?',
+    answers: [79, 83, 89, 93],
+    answer: 93
+  },
+  {
+    id: 93,
+    question: '3 x 7 + 3 x 6 = ?',
+    answers: [28, 29, 38, 39],
+    answer: 39
+  },
+  {
+    id: 94,
+    question: '5 x 8 - 3 x 4 = ?',
+    answers: [18, 20, 28, 30],
+    answer: 28
+  },
+  {
+    id: 95,
+    question: '6 x 9 - 18 : 2 = ?',
+    answers: [18, 21, 33, 45],
+    answer: 45
+  },
+  {
+    id: 96,
+    question: '9 x 9 - 4 x 9 = ?',
+    answers: [45, 49, 51, 63],
+    answer: 45
+  },
+  {
+    id: 97,
+    question: '18 x 3 - 8 x 2 = ?',
+    answers: [36, 38, 40, 42],
+    answer: 38
+  },
+  {
+    id: 98,
+    question: '12 : 2 + 24 : 2 = ?',
+    answers: [15, 18, 20, 21],
+    answer: 18
+  },
+  {
+    id: 99,
+    question: '36 - 7 x 2 = ?',
+    answers: [18, 22, 29, 58],
+    answer: 22
+  },
+  {
+    id: 100,
+    question: '16 : 4 x 3 + 8 = ?',
+    answers: [18, 20, 24, 28],
+    answer: 20
   }
 ];
 
