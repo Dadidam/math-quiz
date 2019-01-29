@@ -7,8 +7,10 @@ const QuitButton = props => {
   const cb = props.action || props.quitQuiz;
   return (
     <div className="left-corner-float">
-      <Button ghost type="danger" onClick={cb}>
-        <Icon type="logout" /> Quit
+      <Button type="danger" onClick={cb} id="quit-button">
+        <div className="quit-button__content">
+          <Icon type="logout" /> Quit
+        </div>
       </Button>
     </div>
   );

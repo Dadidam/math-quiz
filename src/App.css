@@ -40,6 +40,13 @@ body {
   padding: 15px 0 0 15px;
 }
 
+.right-corner-float {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px 25px 0 0;
+}
+
 .startButton {
   opacity: 1;
 }
@@ -53,4 +60,8 @@ body {
 .score-result {
   color: red;
   font-weight: bold;
+}
+
+.quit-button__content {
+  padding: 5px;
 }

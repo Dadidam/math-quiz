@@ -23,6 +23,16 @@ code {
   color: black;
 }
 
+#quit-button {
+  font-size: 1.5em;
+  height: 2.5em;
+}
+
+#quit-button:hover {
+  background-color: red;
+  color: white;
+}
+
 /* low resolution, 480px and below */
 @media only screen and (max-width: 480px) {
   h1 {
@@ -46,10 +56,6 @@ code {
     font-size: 12px;
   }
 
-  .flex-container {
-    height: 300px;
-  }
-
   #quiz-card .ant-card-head-title {
     font-size: 20px;
   }
@@ -61,7 +67,7 @@ code {
 
   #steam-logo {
     width: 300px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
 }
 
@@ -76,7 +82,7 @@ code {
   }
 
   #start-button {
-    font-size: 3em;
+    font-size: 2em;
     height: 2em;
   }
 
@@ -85,11 +91,7 @@ code {
   }
 
   .sticky-footer {
-    font-size: 16px;
-  }
-
-  .flex-container {
-    height: 350px;
+    font-size: 15px;
   }
 
   #quiz-card .ant-card-head-title {
@@ -102,8 +104,8 @@ code {
   }
 
   #steam-logo {
-    width: 450px;
-    padding-bottom: 25px;
+    width: 550px;
+    padding-bottom: 45px;
   }
 }
 
@@ -130,10 +132,6 @@ code {
     font-size: 18px;
   }
 
-  .flex-container {
-    height: 550px;
-  }
-
   #quiz-card .ant-card-head-title {
     font-size: 25px;
   }
@@ -144,7 +142,14 @@ code {
   }
 
   #steam-logo {
-    width: 750px;
+    width: 650px;
     padding-bottom: 30px;
+  }
+}
+
+/* hide footer for devices with low height screens */
+@media only screen and (max-height: 450px) {
+  .sticky-footer {
+    display: none;
   }
 }
