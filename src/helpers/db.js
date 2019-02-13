@@ -490,8 +490,8 @@ const db = [
   {
     id: 81,
     question: '5 x 6 - 7 = ?',
-    answers: [4, 14, 24, 37],
-    answer: 24
+    answers: [4, 14, 23, 37],
+    answer: 23
   },
   {
     id: 82,
