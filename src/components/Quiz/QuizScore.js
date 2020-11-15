@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Icon } from 'antd';
-import { connect } from 'react-redux';
-import { startQuiz } from 'actions/quiz';
-import ScoreAction from './QuizScoreAction';
+import React, { Component } from "react";
+import { Icon } from "antd";
+import { connect } from "react-redux";
+import { startQuiz } from "actions/quiz";
+import ScoreAction from "./QuizScoreAction";
 
 class QuizScore extends Component {
   renderGreetings = () => {
     const { score } = this.props.quiz;
 
-    if (score <= 10) return 'Not Bad!';
-    if (score < 100) return 'Nice Try!';
-    if (score < 200) return 'Great Job!';
-    if (score < 300) return 'Brilliant!';
+    if (score <= 10) return "Not Bad!";
+    if (score < 100) return "Nice Try!";
+    if (score < 200) return "Great Job!";
+    if (score < 300) return "Brilliant!";
 
-    return 'You are AWESOME!';
+    return "You are AWESOME!";
   };
 
   render() {
@@ -28,12 +28,19 @@ class QuizScore extends Component {
         <div>
           <h1>{this.renderGreetings()}</h1>
           <h2>
-            Your Total Score:{' '}
+            Your Total Score:{" "}
             <span className="score-result">
               <Icon type="trophy" />
               &nbsp;{quiz.score}
             </span>
           </h2>
+          {quiz.score > 349 ? (
+            <h3>
+              <i>
+                Secret Code: <strong style={{ color: "green" }}>PENZA</strong>
+              </i>
+            </h3>
+          ) : null}
           <ScoreAction />
         </div>
       );
